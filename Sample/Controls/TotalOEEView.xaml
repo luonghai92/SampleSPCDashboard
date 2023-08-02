@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="Sample.Controls.TotalOEEView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Sample.Controls"
+             xmlns:dxga ="http://schemas.devexpress.com/winfx/2008/xaml/gauges"
+             xmlns:cp="clr-namespace:CircularProgressBar;assembly=CircularProgressBar"
+             mc:Ignorable="d" 
+             
+             d:DesignHeight="200">
+    <Grid>
+        <Border Background="#FFFFFF" CornerRadius="10">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="9" Color="LightGray" />
+            </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Border CornerRadius="10 10 0 0" Background="#FF2727A0" Grid.Row="0" Grid.ColumnSpan="2">
+                    <Label Foreground="White" FontWeight="Bold" VerticalAlignment="Center" FontSize="20">OEE Total</Label>
+                </Border>
+                <cp:CircularProgressBarControl Value="70" Grid.Row="1" Width="100" Height="100"></cp:CircularProgressBarControl>
+                <StackPanel Grid.Row="1" Grid.Column="1">
+                    <Rectangle Height="20"/>
+                    <Grid>
+                        <TextBlock Text="Availbility:" HorizontalAlignment="Left" FontWeight="Bold"/>
+                        <TextBlock Text="80%" HorizontalAlignment="Right" Margin="0,0,10,0" Foreground="Green"/>
+                    </Grid>
+                    <Rectangle Height="20"/>
+                    <Grid>
+                        <TextBlock Text="Performance:" HorizontalAlignment="Left" FontWeight="Bold"/>
+                        <TextBlock Text="80%" HorizontalAlignment="Right" Margin="0,0,10,0" Foreground="Green"/>
+                    </Grid>
+                    <Rectangle Height="20"/>
+                    <Grid>
+                        <TextBlock Text="Quality:" HorizontalAlignment="Left" FontWeight="Bold"/>
+                        <TextBlock Text="80%" HorizontalAlignment="Right" Margin="0,0,10,0" Foreground="Green"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+           
+        </Border>
+    </Grid>
+</UserControl>

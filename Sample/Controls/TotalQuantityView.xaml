@@ -1,0 +1,97 @@
+﻿<UserControl
+    x:Class="Sample.Controls.TotalQuantityView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Sample.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="250"
+    d:DesignWidth="1000"
+    mc:Ignorable="d">
+    <Grid>
+        
+        <Border Background="#FFFFFF" CornerRadius="10">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="9" Color="LightGray" />
+            </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock
+                    Margin="10,0,10,0"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    TextDecorations="Underline"
+                    Text="Actual Quantity / Plan Quantity" />
+                <ProgressBar
+                    Grid.Row="1"
+                    Width="auto"
+                    Margin="50,0,50,0"
+                    Height="20"
+                    Foreground="Orange"
+                    Value="80" />
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Border
+                        Width="auto"
+                        Height="130"
+                        Margin="50,0,50,0"
+                        BorderBrush="Gray"
+                        Background="White"
+                        BorderThickness="2"
+                        CornerRadius="20">
+                        <StackPanel>
+                            <Rectangle Height="20" />
+                            <Label
+                                HorizontalAlignment="Center"
+                                Content="Product OK"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="#FF13B313" />
+                            <Rectangle Height="20" />
+                            <Label
+                                HorizontalAlignment="Center"
+                                Content="0 PCS"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="#FF13B313" />
+                        </StackPanel>
+                    </Border>
+                    <Border
+                        Width="auto"
+                        Height="130"
+                        Margin="50,0,50,0"
+                        BorderBrush="Gray"
+                        Background="White"
+                        BorderThickness="2"
+                        Grid.Column="1"
+                        CornerRadius="20">
+                        <StackPanel>
+                            <Rectangle Height="20" />
+                            <Label
+                                HorizontalAlignment="Center"
+                                Content="Product NG"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="Red" />
+                            <Rectangle Height="20" />
+                            <Label
+                                HorizontalAlignment="Center"
+                                Content="0 PCS"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Foreground="Red" />
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

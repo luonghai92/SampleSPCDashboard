@@ -1,0 +1,11 @@
+H:\1.Projects\4. DemoSPC\DemoSPC\Sample\Sample\obj\Debug\Sample.csproj.AssemblyReference.cache
+H:\1.Projects\4. DemoSPC\DemoSPC\Sample\Sample\obj\Debug\Sample.csproj.SuggestedBindingRedirects.cache
+H:\1.Projects\4. DemoSPC\DemoSPC\Sample\Sample\obj\Debug\Controls\CircularProgressBar.g.cs
+H:\1.Projects\4. DemoSPC\DemoSPC\Sample\Sample\obj\Debug\Controls\CircularProgressPro.g.cs
+H:\1.Projects\4. DemoSPC\DemoSPC\Sample\Sample\obj\Debug\Controls\StationView.g.cs
+H:\1.Projects\4. DemoSPC\DemoSPC\Sample\Sample\obj\Debug\Controls\TotalOEEView.g.cs
+H:\1.Projects\4. DemoSPC\DemoSPC\Sample\Sample\obj\Debug\Controls\TotalQuantityView.g.cs
+H:\1.Projects\4. DemoSPC\DemoSPC\Sample\Sample\obj\Debug\App.g.cs
+H:\1.Projects\4. DemoSPC\DemoSPC\Sample\Sample\obj\Debug\GeneratedInternalTypeHelper.g.cs
+H:\1.Projects\4. DemoSPC\DemoSPC\Sample\Sample\obj\Debug\Sample_MarkupCompile.cache
+H:\1.Projects\4. DemoSPC\DemoSPC\Sample\Sample\obj\Debug\Sample_MarkupCompile.lref
