@@ -62,7 +62,7 @@
                         Height="20"
                         Margin="10,0,0,0"
                         HorizontalAlignment="Left"
-                        Background="#FF14A236"
+                        Background="{Binding StatusColor}"
                         CornerRadius="3" />
                     <Label
                         VerticalAlignment="Center"
@@ -122,10 +122,11 @@
                                     Content="Availability"
                                     FontSize="15"
                                     Foreground="White" />
-                                <Label
+                                <TextBlock
                                     HorizontalAlignment="Right"
                                     VerticalAlignment="Center"
-                                    Content="100%"
+                                    Text="{Binding Aavaibility,StringFormat={}{0}%}"
+                                    
                                     FontSize="15"
                                     Foreground="White" />
                             </DockPanel>
@@ -138,11 +139,11 @@
                                 Content="Downtime"
                                 FontSize="15"
                                 Foreground="Black" />
-                            <Label
+                            <TextBlock
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center"
-                                Name="abc"
-                                Content="{Binding progressValue}"
+                                Name="Downtime"
+                                Text="{Binding DownTime,StringFormat={}{0} h}"
                                 FontSize="15"
                                 Foreground="Green" />
                         </DockPanel>
@@ -154,10 +155,11 @@
                                 Content="MTTR"
                                 FontSize="15"
                                 Foreground="Black" />
-                            <Label
+                            <TextBlock
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center"
-                                Content="100%"
+                                Name = "MTTR"
+                                Text="{Binding Total, StringFormat={}{0} %}"
                                 FontSize="15"
                                 Foreground="Green" />
                         </DockPanel>
@@ -169,14 +171,14 @@
                                 Content="MTBF"
                                 FontSize="15"
                                 Foreground="Black" />
-                            <Label
+                            <TextBlock
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center"
-                                Content="100%"
+                                Name="MTBF"
+                                Text="{Binding Total, StringFormat={}{0} %}"
                                 FontSize="15"
                                 Foreground="Green" />
                         </DockPanel>
-                        <Button Click="clickme">Click me</Button>
                     </StackPanel>
                 </Border>
                 <Border
@@ -198,10 +200,11 @@
                                     Content="Performance"
                                     FontSize="15"
                                     Foreground="White" />
-                                <Label
+                                <TextBlock
                                     HorizontalAlignment="Right"
                                     VerticalAlignment="Center"
-                                    Content="100%"
+                                    Name="Performance"
+                                    Text="{Binding Performance,StringFormat={}{0}%}"
                                     FontSize="15"
                                     Foreground="White" />
                             </DockPanel>
@@ -214,10 +217,12 @@
                                 Content="Ideal Prod:"
                                 FontSize="15"
                                 Foreground="Black" />
-                            <Label
+                            <TextBlock
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center"
-                                Content="1000 pcs/h"
+                                Name="IdealProd"
+                                
+                                Text="{Binding IdealProd,StringFormat={}{0} pcs/h}"
                                 FontSize="15"
                                 Foreground="Green" />
                         </DockPanel>
@@ -229,10 +234,11 @@
                                 Content="Gross Prod"
                                 FontSize="15"
                                 Foreground="Black" />
-                            <Label
+                            <TextBlock
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center"
-                                Content="1200 pcs/h"
+                                Text="{Binding GrossProd,StringFormat={}{0} pcs/h}"
+                                Name="GrossProd"
                                 FontSize="15"
                                 Foreground="Green" />
                         </DockPanel>
@@ -244,10 +250,11 @@
                                 Content="Losses"
                                 FontSize="15"
                                 Foreground="Black" />
-                            <Label
+                            <TextBlock
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center"
-                                Content="0 pcs/h"
+                                Text="{Binding Losses,StringFormat={}{0} pcs/h}"
+                                Name="Losses"
                                 FontSize="15"
                                 Foreground="Green" />
                         </DockPanel>
@@ -272,18 +279,17 @@
                                     Content="Quality"
                                     FontSize="15"
                                     Foreground="White" />
-                                <Label
+                                <TextBlock
                                     Width="70"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
-                                    HorizontalContentAlignment="Center"
-                                    Content="0.05%"
+                                    Text="{Binding QuantityNGPercent,StringFormat={}{0}%}"
                                     FontSize="15"
                                     Foreground="White" />
-                                <Label
+                                <TextBlock
                                     HorizontalAlignment="Right"
                                     VerticalAlignment="Center"
-                                    Content="99.95%"
+                                    Text="{Binding QuantityPercent,StringFormat={}{0}%}"
                                     FontSize="15"
                                     Foreground="White" />
                             </DockPanel>
@@ -296,11 +302,12 @@
                                 Content="Total:"
                                 FontSize="15"
                                 Foreground="Black" />
-                            <Label
+                            <TextBlock
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center"
-                                Content="0 pcs"
+                                Text="{Binding Total, StringFormat={}{0} pcs}"
                                 FontSize="15"
+                                Name="Total"
                                 Foreground="Green" />
                         </DockPanel>
                         <Rectangle Height="10" />
@@ -311,10 +318,11 @@
                                 Content="OK:"
                                 FontSize="15"
                                 Foreground="Black" />
-                            <Label
+                            <TextBlock
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center"
-                                Content="0 pcs"
+                                Text="{Binding Total, StringFormat={}{0} pcs}"
+                                Name = "NumOK"
                                 FontSize="15"
                                 Foreground="Green" />
                         </DockPanel>
@@ -326,10 +334,11 @@
                                 Content="NG:"
                                 FontSize="15"
                                 Foreground="Black" />
-                            <Label
+                            <TextBlock
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center"
-                                Content="0 pcs"
+                                Text="{Binding Total, StringFormat={}{0} pcs}"
+                                Name = "NumNG"
                                 FontSize="15"
                                 Foreground="Green" />
                         </DockPanel>
@@ -341,10 +350,11 @@
                                 Content="NG Setup"
                                 FontSize="15"
                                 Foreground="Black" />
-                            <Label
+                            <TextBlock
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Center"
-                                Content="0 pcs"
+                                Text="{Binding Total, StringFormat={}{0} pcs}"
+                                Name ="NumNGSetup"
                                 FontSize="15"
                                 Foreground="Green" />
                         </DockPanel>

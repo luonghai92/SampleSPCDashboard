@@ -7,8 +7,23 @@
              xmlns:dxga ="http://schemas.devexpress.com/winfx/2008/xaml/gauges"
              xmlns:cp="clr-namespace:CircularProgressBar;assembly=CircularProgressBar"
              mc:Ignorable="d" 
-             
-             d:DesignHeight="200">
+             d:DesignWidth="300"
+             d:DesignHeight="300">
+    <UserControl.Resources>
+        <Style x:Key="key-style" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="0, 10,0,10"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style x:Key="value-style" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="0, 10,10,10"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Foreground" Value="#FF08691B"/>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Border Background="#FFFFFF" CornerRadius="10">
             <Border.Effect>
@@ -29,20 +44,20 @@
                 <cp:CircularProgressBarControl Value="70" Grid.Row="1" Width="100" Height="100"></cp:CircularProgressBarControl>
                 <StackPanel Grid.Row="1" Grid.Column="1">
                     <Rectangle Height="20"/>
-                    <Grid>
-                        <TextBlock Text="Availbility:" HorizontalAlignment="Left" FontWeight="Bold"/>
-                        <TextBlock Text="80%" HorizontalAlignment="Right" Margin="0,0,10,0" Foreground="Green"/>
-                    </Grid>
+                    <DockPanel>
+                        <TextBlock Text="Availbility:" Style="{StaticResource key-style}"/>
+                        <TextBlock Text="80%" Style="{StaticResource value-style}"/>
+                    </DockPanel>
                     <Rectangle Height="20"/>
-                    <Grid>
-                        <TextBlock Text="Performance:" HorizontalAlignment="Left" FontWeight="Bold"/>
-                        <TextBlock Text="80%" HorizontalAlignment="Right" Margin="0,0,10,0" Foreground="Green"/>
-                    </Grid>
+                    <DockPanel>
+                        <TextBlock Text="Performance:" Style="{StaticResource key-style}"/>
+                        <TextBlock Text="80%" Style="{StaticResource value-style}"/>
+                    </DockPanel>
                     <Rectangle Height="20"/>
-                    <Grid>
-                        <TextBlock Text="Quality:" HorizontalAlignment="Left" FontWeight="Bold"/>
-                        <TextBlock Text="80%" HorizontalAlignment="Right" Margin="0,0,10,0" Foreground="Green"/>
-                    </Grid>
+                    <DockPanel>
+                        <TextBlock Text="Quality:" Style="{StaticResource key-style}"/>
+                        <TextBlock Text="80%" Style="{StaticResource value-style}"/>
+                    </DockPanel>
                 </StackPanel>
             </Grid>
            
